@@ -1,0 +1,14 @@
+declare
+id_department varchar2(128);
+name_department varchar2(128);
+id_manager int;
+begin
+select department_id, department_name, manager_id
+into id_department, name_department, id_manager
+from departments
+where department_id='110';
+dbms_output.put_line(id_department);
+dbms_output.put_line(name_department);
+dbms_output.put_line(id_manager);
+end;
+/

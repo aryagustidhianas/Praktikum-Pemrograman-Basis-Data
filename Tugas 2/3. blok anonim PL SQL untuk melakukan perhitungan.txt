@@ -1,0 +1,10 @@
+declare
+x constant int :=1;
+y int :=4;
+z number;
+begin
+y :=4;
+z :=x+y;
+dbms_output.put_line('hasil='||z);
+end;
+/

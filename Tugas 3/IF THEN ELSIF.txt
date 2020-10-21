@@ -1,0 +1,20 @@
+declare
+tinggi integer(3);
+kelamin varchar(9);
+keterangan varchar2(200);
+begin
+kelamin := '&input_kelamin';
+tinggi := &input_tinggi;
+if (kelamin = 'Pria') then
+if (tinggi >= 165 ) then keterangan :='Anda lolos tes tinggi badan pria.';
+elsif(tinggi < 165 ) then keterangan := 'Anda tidak lolos tes tinggi badan pria.';
+end if;
+else
+if (tinggi >= 160 ) then keterangan := 'Anda lolos tes tinggi badan wanita.';
+elsif(tinggi < 160 ) then keterangan := 'Anda tidak lolos tes tinggi badan wanita.';
+end if;
+end if;
+dbms_output.put_line('Kelamin : ' || kelamin);
+dbms_output.put_line('Keterangan : ' || keterangan);
+end;
+/

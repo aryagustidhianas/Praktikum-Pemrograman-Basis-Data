@@ -1,0 +1,9 @@
+declare
+jari number :=10;
+phi float :=3.14;
+luas float;
+begin
+luas := phi*jari*jari;
+dbms_output.put_line('luas ='||luas);
+end;
+/
